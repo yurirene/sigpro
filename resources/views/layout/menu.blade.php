@@ -21,41 +21,30 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item {{ request()->is('lojas*') ? 'active' : '' }}">
-                    <a href="{{ route('lojas.index') }}" class='sidebar-link'>
+                <li class="sidebar-item {{ request()->is('produtos') ? 'active' : '' }}">
+                    <a href="{{ route('produtos.index') }}" class='sidebar-link'>
                         <i class="bi bi-bag"></i>
-                        <span>Lojas</span>
+                        <span>Produtos</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item {{ request()->is('clientes*') ? 'active' : '' }}">
-                    <a href="#" class='sidebar-link'>
+                <li class="sidebar-item {{ request()->is('pedidos') ? 'active' : '' }}">
+                    <a href="{{ route('pedidos.index') }}" class='sidebar-link'>
                         <i class="bi bi-person-square"></i>
-                        <span>Clientes</span>
+                        <span>Pedidos</span>
                     </a>
                 </li>
 
-                
+                @if(auth()->user()->admin)
                 <li class="sidebar-item {{ request()->is('usuarios*') ? 'active' : '' }}">
-                    <a href="#" class='sidebar-link'>
+                    <a href="{{ route('usuarios.index') }}" class='sidebar-link'>
                         <i class="bi bi-people"></i>
                         <span>Usuários</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item {{ request()->is('relatorios*') ? 'active' : '' }}">
-                    <a href="#" class='sidebar-link'>
-                        <i class="bi bi-bar-chart"></i>
-                        <span>Relatórios</span>
-                    </a>
-                </li>
+                @endif
 
-                <li class="sidebar-item {{ request()->is('relatorios*') ? 'active' : '' }}">
-                    <a href="#" class='sidebar-link'>
-                        <i class="bi bi-lock"></i>
-                        <span>Trocar Senha</span>
-                    </a>
-                </li>
                 <li class="sidebar-item {{ request()->is('relatorios*') ? 'active' : '' }}">
                     {!! Form::open(['method' => 'POST', 'route' => 'logout', 'class' => 'form-horizontal', 'id' => 'logout-form']) !!}
                     <a href="#" id="logout" class='sidebar-link'>
@@ -63,7 +52,7 @@
                         <span>Logout</span>
                     </a>
                     {!! Form::close() !!}
-                    
+
                 </li>
             </ul>
         </div>

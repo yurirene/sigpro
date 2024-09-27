@@ -6,89 +6,131 @@
 <section class="row">
     <div class="col-12 col-lg-12">
         <div class="row">
-            <div class="col-6 col-lg-4 col-md-6">
+            <div class="col-6 col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body px-3 py-4-5">
                         <div class="row ">
                             <div class="col-md-3" >
                                 <div class="stats-icon purple">
-                                    <i class="iconly-boldUser"></i>
+                                    <i class="iconly-boldBag-2"></i>
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <h6 class="text-muted font-semibold">Clientes</h6>
-                                <h6 class="font-extrabold mb-0">6</h6>
+                                <h6 class="text-muted font-semibold">Produtos em Estoque</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalizadores['total_produtos'] }}</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-4 col-md-6">
+            <div class="col-6 col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body px-3 py-4-5">
                         <div class="row">
                             <div class="col-md-3" >
                                 <div class="stats-icon blue">
-                                    <i class="iconly-boldBag"></i>
+                                    <i class="iconly-boldWallet"></i>
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <h6 class="text-muted font-semibold">Lojas</h6>
-                                <h6 class="font-extrabold mb-0">5</h6>
+                                <h6 class="text-muted font-semibold">Valor em Estoque</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalizadores['valor_produtos'] }}</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-lg-4 col-md-6">
+            <div class="col-6 col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                        <div class="row">
+                            <div class="col-md-3" >
+                                <div class="stats-icon purple">
+                                    <i class="iconly-boldBag-2"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h6 class="text-muted font-semibold">Produtos Consignados</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalizadores['total_consignado'] }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                        <div class="row">
+                            <div class="col-md-3" >
+                                <div class="stats-icon blue">
+                                    <i class="iconly-boldWallet"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h6 class="text-muted font-semibold">Valor Consignado</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalizadores['valor_consignado'] }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-6">
                 <div class="card">
                     <div class="card-body px-3 py-4-5">
                         <div class="row">
                             <div class="col-md-3" >
                                 <div class="stats-icon green">
-                                    <i class="iconly-boldAdd-User"></i>
+                                    <i class="iconly-boldArrow---Down"></i>
                                 </div>
                             </div>
                             <div class="col-md-8">
-                                <h6 class="text-muted font-semibold">Funcionários</h6>
-                                <h6 class="font-extrabold mb-0">80</h6>
+                                <h6 class="text-muted font-semibold">Entradas</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalizadores_fluxo['entradas'] }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                        <div class="row">
+                            <div class="col-md-3" >
+                                <div class="stats-icon red">
+                                    <i class="iconly-boldArrow---Up"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h6 class="text-muted font-semibold">Saídas</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalizadores_fluxo['saidas'] }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                        <div class="row">
+                            <div class="col-md-3" >
+                                <div class="stats-icon green">
+                                    <i class="iconly-boldWallet"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h6 class="text-muted font-semibold">Saldo</h6>
+                                <h6 class="font-extrabold mb-0">{{ $totalizadores_fluxo['saldo'] }}</h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Gráfico de Acessos</h4>
-                    </div>
-                    <div class="card-body">
-                        <div id="chart-profile-visit"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Gráfico de Perfil</h4>
-                    </div>
-                    <div class="card-body">
-                        <div id="chart-visitors-profile"></div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        
     </div>
-   
+
 </section>
 @endsection
 
 @push('js')
 
-<script src="/assets/vendors/apexcharts/apexcharts.js"></script>
-<script src="/assets/js/pages/dashboard.js"></script>
 @endpush

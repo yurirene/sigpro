@@ -16,12 +16,11 @@ class UserSeeder extends Seeder
     public function run()
     {
         try {
-            User::updateOrCreate([
+            $usuario = User::create([
                 'name' => 'Yuri',
-                'email' => 'yurirene@gmail.com',
+                'email' => 'yuri@ump.net.br',
                 'password' => Hash::make('123'),
-                'is_admin' => true,
-                'perfil_id' => 1
+                'admin' => true
             ]);
         } catch (\Throwable $th) {
             dd($th->getMessage());

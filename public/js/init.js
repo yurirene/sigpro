@@ -62,13 +62,6 @@ $(document).ready(function() {
     url = url.replace(/\/$/, "");
     url = decodeURIComponent(url);
 
-    $('.sidebar-link').each(function(){
-        var href = $(this).attr('href');
-        if (href.includes(url.split('/')[1])) {
-            $(this).parent().addClass('active');
-        }
-    });
-
     $('.submenu-item a').each(function(){
         var href = $(this).attr('href');
         if (href.includes(url.split('/')[2])) {
